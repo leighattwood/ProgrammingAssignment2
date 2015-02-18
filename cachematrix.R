@@ -1,7 +1,7 @@
 ## The functions provided allow for the calculation of an inverse matrix
 ## for any given matrix. To make future calculations more efficient, it 
 ## caches the results and so if the inverse matrix is requested again, the 
-## function will simply return the cached matrix, rather than calculating
+## function will simply return the cached inverse matrix, rather than calculating
 ## the inverse matrix anew.
 
 
@@ -36,10 +36,10 @@ makeCacheMatrix <- function(x = matrix())
 }
 
 
-## cacheSolve takes a makeCacheMatrix as an input and returns its inverse matrix.
+## cacheSolve takes a makeCacheMatrix as an input and returns the inverse matrix.
 ## It checks whether the makeCacheMatrix input has a cached inverse matrix
 ## and returns that if it exists. Otherwise it calculates the inverse matrix
-## and caches it in the makeCacheMatrix object.
+## anew and caches it in the makeCacheMatrix object for future requests.
 cacheSolve <- function(x, ...) 
 {
         
